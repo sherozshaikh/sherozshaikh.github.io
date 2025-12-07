@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sheroz Shaikh - ML Engineer specializing in Document AI, RAG Systems, and LLM Integration. 8+ years building production AI solutions.">
+    <meta name="keywords" content="Machine Learning Engineer, AI Engineer, Document AI, RAG Systems, LLMs, Computer Vision, NLP">
+    
+    <meta property="og:title" content="Sheroz Shaikh - ML Engineer">
+    <meta property="og:description" content="Production ML Engineer specializing in Document Intelligence, RAG Systems, and LLM Integration">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sherozshaikh.github.io">
+    
+    <title>Sheroz Shaikh - ML Engineer</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f5f5f7;
+            --text-primary: #1d1d1f;
+            --text-secondary: #6e6e73;
+            --accent: #0071e3;
+            --accent-hover: #0077ed;
+            --border: #d2d2d7;
+            --success: #30d158;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 6rem;
+            --max-width: 1120px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+        
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: var(--spacing-sm) 0;
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav .logo {
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        
+        nav ul {
+            display: flex;
+            gap: var(--spacing-md);
+            list-style: none;
+        }
+        
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: var(--transition);
+        }
+        
+        nav a:hover {
+            color: var(--text-primary);
+        }
+        
+        .hero {
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-md);
+            font-weight: 400;
+        }
+        
+        .hero .description {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto var(--spacing-md);
+            line-height: 1.7;
+        }
+        
+        .availability-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--bg-secondary);
+            border-radius: 100px;
+            font-size: 0.875rem;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .availability-badge .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: var(--spacing-sm);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            display: inline-block;
+            font-size: 0.9375rem;
+        }
+        
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--accent);
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: var(--spacing-sm);
+            justify-content: center;
+            margin-top: var(--spacing-md);
+        }
+        
+        .social-links a {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+        
+        section {
+            padding: var(--spacing-xl) 0;
+        }
+        
+        section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+            text-align: center;
+            letter-spacing: -0.02em;
+        }
+        
+        section .section-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            margin-bottom: var(--spacing-lg);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .project-card {
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            padding: var(--spacing-md);
+            transition: var(--transition);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-sm);
+            font-weight: 600;
+        }
+        
+        .project-card .description {
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.6;
+        }
+        
+        .project-card .impact {
+            background: white;
+            padding: var(--spacing-sm);
+            border-radius: 8px;
+            margin-bottom: var(--spacing-sm);
+            font-size: 0.875rem;
+        }
+        
+        .project-card .impact strong {
+            color: var(--accent);
+        }
+        
+        .project-card .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .tech-tag {
+            background: white;
+            color: var(--text-secondary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .project-links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .skill-category {
+            background: var(--bg-secondary);
+            padding: var(--spacing-md);
+            border-radius: 16px;
+        }
+        
+        .skill-category h3 {
+            font-size: 1.125rem;
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+        }
+        
+        .skill-category li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .skill-category li:last-child {
+            border-bottom: none;
+        }
+        
+        .timeline {
+            max-width: 800px;
+            margin: var(--spacing-lg) auto;
+        }
+        
+        .timeline-item {
+            background: var(--bg-secondary);
+            padding: var(--spacing-md);
+            border-radius: 16px;
+            margin-bottom: var(--spacing-md);
+            position: relative;
+            padding-left: 3rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            top: 1.5rem;
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+        
+        .timeline-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .timeline-item .company {
+            color: var(--accent);
+            font-weight: 500;
+        }
+        
+        .timeline-item .date {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .timeline-item ul {
+            margin-left: 1.5rem;
+            color: var(--text-secondary);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .testimonial-card {
+            background: var(--bg-secondary);
+            padding: var(--spacing-md);
+            border-radius: 16px;
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--accent);
+            opacity: 0.2;
+            position: absolute;
+            top: 0;
+            left: 1rem;
+        }
+        
+        .testimonial-card .quote {
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-card .author {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .testimonial-card .title {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+            align-items: start;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .contact-info p {
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-md);
+            line-height: 1.7;
+        }
+        
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-secondary);
+        }
+        
+        .contact-item a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        .calendly-container {
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            padding: var(--spacing-sm);
+            min-height: 700px;
+        }
+        
+        footer {
+            background: var(--bg-secondary);
+            padding: var(--spacing-md) 0;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-top: var(--spacing-xl);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.25rem;
+            }
+            
+            section h2 {
+                font-size: 2rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                gap: var(--spacing-sm);
+            }
+            
+            nav a {
+                font-size: 0.8125rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">Sheroz Shaikh</a>
+            <ul>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Hi, I'm Sheroz Shaikh 👋</h1>
+            <p class="subtitle">ML Engineer | Document AI • LLMs • Computer Vision • RAG Systems</p>
+            <p class="description">
+                I build production-ready AI systems that process millions of documents, 
+                power intelligent search, and automate complex workflows.
+            </p>
+            
+            <div class="availability-badge">
+                <span class="dot"></span>
+                <span>Actively seeking opportunities | Available May 2025</span>
+            </div>
+            
+            <div style="margin-bottom: 1rem; color: var(--text-secondary); font-size: 0.875rem;">
+                📍 Somerville, MA • 🌍 Open to Remote & Relocation
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Schedule a Call</a>
+                <a href="mailto:shaikh.sheroz07@gmail.com" class="btn btn-secondary">Email Me</a>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://github.com/sherozshaikh" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/shaikh-sheroz-07s" target="_blank">LinkedIn</a>
+                <a href="https://huggingface.co/ssheroz" target="_blank">HuggingFace</a>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2>About Me</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center; color: var(--text-secondary); line-height: 1.8;">
+                <p style="margin-bottom: 1rem;">
+                    I'm an ML Engineer with <strong style="color: var(--text-primary);">8+ years of experience</strong> turning complex data challenges into production-ready AI solutions. 
+                    My specialty is building <strong style="color: var(--text-primary);">document intelligence systems</strong> and 
+                    <strong style="color: var(--text-primary);">RAG pipelines</strong> that handle millions of records with high accuracy and reliability.
+                </p>
+                <p style="margin-bottom: 1rem;">
+                    Currently completing my <strong style="color: var(--text-primary);">MS in Data Science at WPI (3.9 GPA)</strong>, 
+                    I've led projects that reduced manual work by 77%, cut operational costs by 44%, and improved prediction accuracy by 18%.
+                </p>
+                <p>
+                    I speak English, Hindi, and Marathi 🌏 | Won Best Data Science Project Award 2024 🏆
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <p class="section-subtitle">Production ML systems with measurable business impact</p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Industrial Document Classifier</h3>
+                    <p class="description">
+                        Multi-modal AI system combining vision transformers, CLIP, YOLO, and OCR 
+                        to automatically classify 13 types of industrial documents.
+                    </p>
+                    <div class="impact">
+                        <strong>Impact:</strong> 89% F1 score, 500+ concurrent requests, 77% reduction in manual tagging
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">CLIP-Large</span>
+                        <span class="tech-tag">YOLOv8</span>
+                        <span class="tech-tag">OCR</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://huggingface.co/ssheroz/industrial-document-classifier-clip-lora" target="_blank">Model →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Medical Coding Automation</h3>
+                    <p class="description">
+                        LLM-powered medical coding system using RAG architecture with multiple vector databases 
+                        for intelligent document retrieval and terminology understanding.
+                    </p>
+                    <div class="impact">
+                        <strong>Impact:</strong> 57% reduction in coding errors, 47% boost in team productivity
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">OpenAI API</span>
+                        <span class="tech-tag">LangChain</span>
+                        <span class="tech-tag">FAISS</span>
+                        <span class="tech-tag">Pinecone</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Hybrid Vector Search System</h3>
+                    <p class="description">
+                        High-performance search infrastructure handling 940K+ documents with sub-second 
+                        query times and 99.9% uptime under heavy concurrent load.
+                    </p>
+                    <div class="impact">
+                        <strong>Impact:</strong> Reduced latency from 2.3s → 0.8s with 500+ concurrent users
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Pinecone</span>
+                        <span class="tech-tag">FAISS</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">Python</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Clinical Document Analysis</h3>
+                    <p class="description">
+                        Automated ML system processing 10M+ clinical records with drift detection, 
+                        A/B testing, and automated retraining pipelines.
+                    </p>
+                    <div class="impact">
+                        <strong>Impact:</strong> 40% faster retrieval, 18% better predictions, 99.5% uptime
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">H2O AutoML</span>
+                        <span class="tech-tag">MLflow</span>
+                        <span class="tech-tag">AWS S3</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: var(--spacing-md);">
+                <a href="https://github.com/sherozshaikh" target="_blank" class="btn btn-secondary">View All Projects on GitHub →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2>Technical Expertise</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>🤖 ML & Deep Learning</h3>
+                    <ul>
+                        <li>PyTorch, TensorFlow</li>
+                        <li>Scikit-learn, Hugging Face</li>
+                        <li>Computer Vision (ViT, CLIP, YOLO)</li>
+                        <li>NLP & Transformers</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>📄 Document Intelligence</h3>
+                    <ul>
+                        <li>Multi-modal Processing</li>
+                        <li>OCR (Dots, Google Vision)</li>
+                        <li>Document Classification</li>
+                        <li>Text Extraction & Analysis</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>🧠 LLMs & GenAI</h3>
+                    <ul>
+                        <li>OpenAI API, Claude API</li>
+                        <li>Gemini API, LangChain</li>
+                        <li>RAG Pipelines</li>
+                        <li>Prompt Engineering</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>🔍 Vector Databases</h3>
+                    <ul>
+                        <li>FAISS, Pinecone, Chroma</li>
+                        <li>OpenAI VectorStore</li>
+                        <li>Similarity Search</li>
+                        <li>Document Retrieval</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>⚙️ MLOps & Production</h3>
+                    <ul>
+                        <li>MLflow, H2O AutoML</li>
+                        <li>Model Deployment</li>
+                        <li>Microservices, APIs</li>
+                        <li>Docker, CI/CD</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>☁️ Cloud & Data</h3>
+                    <ul>
+                        <li>AWS (S3), Azure ML, GCP</li>
+                        <li>PySpark, Databricks</li>
+                        <li>Apache Airflow, Redis</li>
+                        <li>SQL, PostgreSQL, MongoDB</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2>Experience</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Machine Learning Engineer Consultant</h3>
+                    <div class="company">Biogas Engineering</div>
+                    <div class="date">May 2025 - Nov 2025 | California, USA</div>
+                    <ul>
+                        <li>Built document classification system achieving 89%+ F1 score with 500+ concurrent requests</li>
+                        <li>Architected ViT + CLIP + YOLO + OCR ensemble surpassing traditional OCR by 15%</li>
+                        <li>Developed Claude API system reducing customer inquiry response times by 73%</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Machine Learning Engineer Intern</h3>
+                    <div class="company">ProsperOn</div>
+                    <div class="date">Mar 2025 - Apr 2025 | Boston, MA</div>
+                    <ul>
+                        <li>Built robust data pipeline for customer dataset processing and analysis</li>
+                        <li>Automated generation of interactive Plotly dashboards for user activity trends</li>
+                        <li>Delivered reusable scripts for attrition pattern analysis and reporting</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Machine Learning Engineer Intern</h3>
+                    <div class="company">Discern Health</div>
+                    <div class="date">Aug 2024 - Dec 2024 | Texas, USA</div>
+                    <ul>
+                        <li>Designed automated medical document analysis system handling 10M+ clinical records</li>
+                        <li>Implemented ML retraining pipelines with drift detection improving accuracy by 15%</li>
+                        <li>Reduced data retrieval time by 40% through optimized frameworks and dashboards</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Machine Learning Engineer</h3>
+                    <div class="company">dataX.ai (formerly CrowdAnalytix)</div>
+                    <div class="date">Dec 2018 - July 2023 | Bengaluru, India</div>
+                    <ul>
+                        <li>Engineered medical coding automation using LangChain reducing errors by 57%</li>
+                        <li>Implemented RAG pipeline with multiple vector databases boosting productivity by 47%</li>
+                        <li>Built hybrid vector search system achieving sub-second queries across 940K+ documents</li>
+                        <li>Developed multilingual documentation system cutting operational costs by 44%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <p class="section-subtitle">What colleagues say about working with me</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="quote">
+                        I had the pleasure of working with Sheroz at Discern Health for the WPI industry project. 
+                        One thing that stood out to me early was his willingness and desire to get into the details 
+                        of the project, as well as his ability to communicate those concepts back to the team. 
+                        During the course of the project he demonstrated strong technical, analytical, and 
+                        presentation skills, culminating in a number of performant machine learning models. 
+                        I would recommend Sheroz to any data team.
+                    </p>
+                    <div class="author">Jacob Dodd</div>
+                    <div class="title">AI/ML Engineer @ Laurel</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="quote">
+                        He is dedicated to work he complete the varies task related to Analysis and MIS. 
+                        I personally very happy this kind of interns i learn many things from him. 
+                        Very good knowledge about logical thinking and quick resolution.
+                    </p>
+                    <div class="author">Bhim Thakur</div>
+                    <div class="title">Senior Manager - Credit Card Risk & Policy</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Let's Connect</h2>
+            <p class="section-subtitle">
+                Actively seeking full-time ML Engineering roles, AI consulting opportunities, and innovative startup projects
+            </p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>
+                        I'm open to discussing ML engineering roles, consulting projects, 
+                        or just having a chat about AI, document intelligence, and RAG systems.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span>📧</span>
+                            <a href="mailto:shaikh.sheroz07@gmail.com">shaikh.sheroz07@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span>📍</span>
+                            <span>Somerville, MA (Open to remote & relocation)</span>
+                        </div>
+                        <div class="contact-item">
+                            <span>💼</span>
+                            <a href="https://linkedin.com/in/shaikh-sheroz-07s" target="_blank">LinkedIn</a>
+                        </div>
+                        <div class="contact-item">
+                            <span>🐙</span>
+                            <a href="https://github.com/sherozshaikh" target="_blank">GitHub</a>
+                        </div>
+                        <div class="contact-item">
+                            <span>🤗</span>
+                            <a href="https://huggingface.co/ssheroz" target="_blank">HuggingFace</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="calendly-container">
+                    <div class="calendly-inline-widget" 
+                         data-url="https://calendly.com/shaikh-sheroz07/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=0071e3" 
+                         style="min-width:320px;height:700px;"></div>
+                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Sheroz Shaikh. Built with focus on clean design and user experience.</p>
+            <p style="margin-top: 0.5rem;">MS Data Science @ WPI | 8+ Years Production ML Experience</p>
+        </div>
+    </footer>
+</body>
+</html>
