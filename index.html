@@ -9,6 +9,8 @@
     <meta property="og:title" content="Sheroz Shaikh | ML Engineer & AI Systems Builder">
     <meta property="og:description" content="ML Engineer • Data Engineer • Building Production AI Systems at Scale">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sherozshaikh.github.io/">
+    <meta property="og:image" content="https://sherozshaikh.github.io/preview.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -391,6 +393,34 @@
         <div class="hero-scroll"><span class="hero-scroll-text">Scroll</span><div class="hero-scroll-line"></div></div>
     </section>
 
+    </section>
+    <!-- FEATURED SYSTEMS -->
+    <section class="section">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-label"><i class="fas fa-rocket"></i> Featured Systems</div>
+          <h2 class="section-title">Production <span class="gradient-text">ML Systems</span></h2>
+          <p class="section-desc">Real-world AI systems I've built and deployed at scale.</p>
+        </div>
+
+        <div style="max-width:800px;margin:auto;font-size:0.95rem;color:var(--text-secondary);line-height:1.9">
+
+          <p><strong>LLM Medical Coding System</strong><br>
+          → Processes <span class="metric">100K+ monthly requests</span><br>
+          → Used by <span class="metric">10+ enterprise healthcare clients</span></p>
+
+          <p><strong>Semantic Search Platform</strong><br>
+          → Indexed <span class="metric">940K healthcare documents</span><br>
+          → Delivered <span class="metric">$80K/month operational savings</span></p>
+
+          <p><strong>Document Triage ML Pipeline</strong><br>
+          → Processes <span class="metric">900+ documents/day</span><br>
+          → Automated <span class="metric">80% of workflows</span></p>
+
+        </div>
+      </div>
+    </section>
+
     <!-- ABOUT -->
     <section class="section" id="about">
         <div class="section-container">
@@ -447,7 +477,7 @@
                     </div>
                     <div class="award-card">
                         <i class="fas fa-trophy"></i>
-                        <div class="award-text"><strong>🏆 Best Data Science Project (Winter 2024)</strong> — Won 1st place for a healthcare project out of 20+ teams at WPI, recognized for technical rigor and real-world impact.</div>
+                        <div class="award-text"><strong>🏆 Best Data Science Project (Winter 2024)</strong> — Won 1st place for a healthcare project at WPI, recognized for technical rigor and real-world impact.</div>
                     </div>
                 </div>
             </div>
@@ -463,6 +493,66 @@
                 <p class="section-desc">Building production ML systems that drive real business outcomes and operational savings.</p>
             </div>
             <div class="timeline">
+
+                <!-- BIOLOGICAL INFORMATION OS -->
+                <div class="tl-item reveal-el">
+                  <div class="tl-dot"></div>
+                  <div class="tl-card">
+
+                    <div class="tl-header">
+                      <div>
+                        <div class="tl-company">Biological Information OS, Inc</div>
+                        <div class="tl-role">Machine Learning Engineer</div>
+                      </div>
+                      <div class="tl-location"><i class="fas fa-map-marker-alt"></i> Remote, Florida</div>
+                    </div>
+
+                    <div class="tl-meta">
+                      <span class="tl-date"><i class="far fa-calendar-alt"></i> Nov 2025 – Present</span>
+                      <div class="tl-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">LLMs</span>
+                        <span class="tech-tag">Neo4j</span>
+                        <span class="tech-tag">Knowledge Graphs</span>
+                        <span class="tech-tag">Document Parsing</span>
+                        <span class="tech-tag">Information Extraction</span>
+                      </div>
+                    </div>
+
+                    <ul class="tl-points">
+
+                      <li>
+                        Building a document intelligence pipeline to process large volumes of
+                        <span class="metric">life science and biomedical publications</span>
+                        (textbooks, research papers, and reference material), extracting
+                        structured biological entities, relationships, and concepts from
+                        unstructured scientific literature
+                      </li>
+
+                      <li>
+                        Developing document parsing and information extraction workflows that
+                        convert scientific publications into structured datasets used for
+                        downstream biological knowledge modeling
+                      </li>
+
+                      <li>
+                        Designing the architecture for a
+                        <span class="metric">Neo4j-based biological knowledge graph</span>
+                        representing entities, citations, ontologies, and relationships across
+                        life science domains
+                      </li>
+
+                      <li>
+                        Preparing the foundation for
+                        <span class="metric">LLM-powered semantic search and reasoning</span>
+                        over structured biological knowledge derived from large-scale
+                        scientific literature ingestion
+                      </li>
+
+                    </ul>
+
+                  </div>
+                </div>
 
                 <!-- BIOGAS -->
                 <div class="tl-item reveal-el">
@@ -480,10 +570,10 @@
                             <div class="tl-tags"><span class="tech-tag">PyTorch</span><span class="tech-tag">FastAPI</span><span class="tech-tag">Docker</span><span class="tech-tag">AWS</span><span class="tech-tag">Prometheus</span><span class="tech-tag">Claude/OpenAI</span></div>
                         </div>
                         <ul class="tl-points">
-                            <li>Architected production ML classifier that automated <span class="metric">80%</span> of daily document triage (900+ docs), reducing support team workload by <span class="metric">40%</span> and improving first-contact resolution by <span class="metric">68%</span></li>
-                            <li>Built an LLM-powered (Claude API) ticket routing system that automated <span class="metric">40%</span> of classification workflows, eliminating <span class="metric">~$700/month</span> in manual operational costs</li>
-                            <li>Deployed sensor-driven time-series forecasting pipeline using PyTorch that predicts equipment failures <span class="metric">30 days in advance</span>, enabling proactive maintenance scheduling</li>
-                            <li>Implemented observability and monitoring infrastructure achieving <span class="metric">99%+ uptime</span> across production document-processing systems through real-time alerting</li>
+                            <li>Architected and deployed a containerized ML inference service (FastAPI + Docker) for automated document triage, processing <span class="metric">900+</span> daily documents with validation pipelines that automated <span class="metric">80%</span> of workflows, reducing support workload by 40% and improving first-contact resolution by <span class="metric">68%</span></li>
+                            <li>Built an LLM-powered routing service using the Claude API to automate ticket categorization and prioritization, integrating model inference into support workflows and automating <span class="metric">40%</span> of classification tasks, eliminating <span class="metric">~$700/month</span> in manual operational costs</li>
+                            <li>Deployed a sensor-based time-series forecasting pipeline in PyTorch to predict equipment failures up to <span class="metric">30 days in advance</span>, enabling proactive maintenance scheduling and reducing unplanned downtime</li>
+                            <li>Implemented Prometheus-based observability for ML APIs and inference pipelines, tracking system health, latency, and performance metrics with real-time alerting to maintain <span class="metric">99%+ uptime</span> across production document-processing systems</li>
                         </ul>
                     </div>
                 </div>
@@ -504,8 +594,8 @@
                             <div class="tl-tags"><span class="tech-tag">Python</span><span class="tech-tag">SQL</span><span class="tech-tag">AWS S3</span><span class="tech-tag">Polars</span><span class="tech-tag">Plotly</span><span class="tech-tag">PostHog</span></div>
                         </div>
                         <ul class="tl-points">
-                            <li>Engineered a normalized data warehouse from fragmented PostHog events, reducing reporting latency by <span class="metric">75%</span> and standardizing analytics across product teams</li>
-                            <li>Developed automated Plotly dashboards for real-time user adoption metrics, transitioning analytics to a self-service model and eliminating recurring ad-hoc requests</li>
+                            <li>Engineered a normalized analytics warehouse from fragmented PostHog event data, enabling SQL-based cohort and retention pipelines that reduced reporting latency by <span class="metric">75%</span> and standardized analytics across product teams</li>
+                            <li>Developed automated Plotly dashboards for real-time user adoption and engagement metrics, enabling a self-service analytics model and eliminating recurring ad-hoc analysis requests</li>
                         </ul>
                     </div>
                 </div>
@@ -526,8 +616,8 @@
                             <div class="tl-tags"><span class="tech-tag">PySpark</span><span class="tech-tag">SageMaker</span><span class="tech-tag">H2O AutoML</span><span class="tech-tag">Scikit-learn</span><span class="tech-tag">SQL</span></div>
                         </div>
                         <ul class="tl-points">
-                            <li>Optimized PySpark ETL pipeline for <span class="metric">15M+ Medicare</span> records — reduced data scans by <span class="metric">75%</span>, cut storage by <span class="metric">42%</span>, and improved query performance by <span class="metric">58%</span></li>
-                            <li>Improved clinical prediction model recall by <span class="metric">23%</span> through H2O AutoML-driven feature engineering with iterative validation loops for patient outcome classification</li>
+                            <li>Optimized a production PySpark ETL pipeline processing <span class="metric">15M+ Medicare</span> records by implementing a pre-joined, partitioned event/claims architecture, reducing repeated scans by <span class="metric">75%</span>, cutting storage footprint by <span class="metric">42%</span>, and improving query performance by <span class="metric">58%</span></li>
+                            <li>Improved clinical prediction model recall by <span class="metric">23%</span> through H2O AutoML-driven feature engineering, applying iterative validation loops to identify high-impact predictors for patient outcome classification</li>
                         </ul>
                     </div>
                 </div>
@@ -548,10 +638,10 @@
                             <div class="tl-tags"><span class="tech-tag">Python</span><span class="tech-tag">LLMs</span><span class="tech-tag">PyTorch</span><span class="tech-tag">Airflow</span><span class="tech-tag">FastAPI</span><span class="tech-tag">SQL</span></div>
                         </div>
                         <ul class="tl-points">
-                            <li>Deployed production LLM system for automated ICD-10 medical coding serving <span class="metric">10+ enterprise healthcare clients</span>, processing <span class="metric">100K+ monthly requests</span> with integrated validation and monitoring</li>
-                            <li>Built a semantic search platform using vector embeddings over <span class="metric">940K healthcare documents</span>, eliminating manual review of 500K+ docs monthly and delivering <span class="metric">~$80K/month</span> in operational savings</li>
-                            <li>Automated Airflow-orchestrated ETL workflows processing <span class="metric">2M+ monthly records</span>, reducing manual data operations by <span class="metric">70%</span> and saving ~$2.5K/month</li>
-                            <li>Led full-stack ML delivery from requirements gathering through production deployment and <span class="metric">mentored 3 junior engineers</span> on system design and scalable ML architecture</li>
+                            <li>Deployed and maintained a production LLM inference system for automated ICD-10 medical coding, serving <span class="metric">10+ enterprise healthcare clients</span> and processing <span class="metric">100K+ monthly requests</span> with integrated validation, monitoring, and error-handling pipelines</li>
+                            <li>Built a production semantic search pipeline using vector embeddings across <span class="metric">940K healthcare documents</span>, automating large-scale retrieval workflows that eliminated manual review of <span class="metric">500K+ documents monthly</span> and delivered <span class="metric">~$80K/month</span> in operational savings</li>
+                            <li>Designed and automated Airflow DAG-based ETL workflows processing <span class="metric">2M+ monthly records</span>, reducing manual data operations by <span class="metric">70%</span> and saving <span class="metric">~$2.5K/month</span> through scheduled, monitored, and failure-resilient pipeline execution</li>
+                            <li>Led end-to-end ML system development from requirements through production deployment, and <span class="metric">mentored 3 junior engineers</span> on system design, debugging practices, and scalable ML architecture</li>
                         </ul>
                     </div>
                 </div>
@@ -572,14 +662,16 @@
                     <div class="skill-card-header"><div class="skill-icon" style="background:rgba(168,85,247,0.15);color:#c084fc"><i class="fas fa-robot"></i></div><div class="skill-card-name">AI & Agentic Frameworks</div></div>
                     <div class="skill-tags">
                         <span class="skill-tag">Transformers</span>
-                        <span class="skill-tag">LLMs (GPT, Claude)</span>
+                        <span class="skill-tag">LLMs (OpenAI, Anthropic, OpenRouter, Qwen)</span>
+                        <span class="skill-tag">LLM agents</span>
                         <span class="skill-tag">PEFT (LoRA)</span>
                         <span class="skill-tag">RAG Systems</span>
                         <span class="skill-tag">Prompt Engineering</span>
                         <span class="skill-tag">NLP</span>
                         <span class="skill-tag">FAISS</span>
-                        <span class="skill-tag">Pinecone</span>
                         <span class="skill-tag">Chroma</span>
+                        <span class="skill-tag">Pinecone</span>
+                        <span class="skill-tag">Qdrant</span>
                         <span class="skill-tag">PyTorch</span>
                         <span class="skill-tag">Scikit-learn</span>
                         <span class="skill-tag">XGBoost</span>
@@ -597,7 +689,7 @@
                     <div class="skill-card-header"><div class="skill-icon" style="background:var(--accent-glow);color:var(--accent-light)"><i class="fas fa-database"></i></div><div class="skill-card-name">Data Engineering & ETL</div></div>
                     <div class="skill-tags"><span class="skill-tag">PySpark</span>
                         <span class="skill-tag">Polars</span>
-                        <span class="skill-tag">Apache Airflow</span>
+                        <span class="skill-tag">Apache Airflow (DAG pipelines)</span>
                         <span class="skill-tag">SQL</span>
                         <span class="skill-tag">Data Pipelines</span>
                         <span class="skill-tag">Data Quality</span>
@@ -619,10 +711,15 @@
                         <span class="skill-tag">GitHub Actions</span>
                         <span class="skill-tag">CI/CD</span>
                         <span class="skill-tag">Prometheus</span>
+                        <span class="skill-tag">Grafana</span>
                         <span class="skill-tag">API Design</span>
                         <span class="skill-tag">MLOps</span>
                         <span class="skill-tag">DVC</span>
-                        <span class="skill-tag">Grafana</span>
+                        <span class="skill-tag">ML/data Pipelines</span>
+                        <span class="skill-tag">Workflow Automation</span>
+                        <span class="skill-tag">Batch & Scheduled Pipelines</span>
+                        <span class="skill-tag">Pipeline Monitoring</span>
+                        <span class="skill-tag">Metrics Tracking & Alerting</span>
                     </div>
                 </div>
                 <div class="skill-card reveal-el">
@@ -630,6 +727,7 @@
                     <div class="skill-tags"><span class="skill-tag">Python</span>
                         <span class="skill-tag">SQL</span>
                         <span class="skill-tag">LangChain</span>
+                        <span class="skill-tag">LangGraph</span>
                         <span class="skill-tag">Hugging Face</span>
                         <span class="skill-tag">Git</span>
                         <span class="skill-tag">Linux</span>
@@ -658,7 +756,7 @@
                 <div class="project-card reveal-el">
                     <div class="project-icon" style="background:linear-gradient(135deg,#8b5cf6,#6366f1)"><i class="fas fa-microchip"></i></div>
                     <div class="project-name">
-                        <a href="https://github.com/sherozshaikh/spam-email-classification-lora" target="_blank" rel="noopener">
+                        <a href="https://huggingface.co/spaces/ssheroz/spam-email-electra-demo" target="_blank" rel="noopener">
                           Parameter-Efficient Fine-Tuning (LoRA) for Text Classification
                           <i class="fab fa-github link-icon"></i>
                           <i class="fas fa-arrow-up-right-from-square link-icon"></i>
@@ -699,7 +797,7 @@
                         <span><i class="far fa-calendar-alt"></i> May 2025</span>
                         <span class="gpa-badge"><i class="fas fa-star"></i> GPA: 3.9 / 4.0</span>
                     </div>
-                    <div class="edu-award"><i class="fas fa-trophy"></i> <strong>Best Data Science Project (Winter 2024)</strong> — 1st place out of 20+ teams for healthcare project</div>
+                    <div class="edu-award"><i class="fas fa-trophy"></i> <strong>Best Data Science Project (Winter 2024)</strong> — 1st place for healthcare project</div>
                 </div>
                 <div class="edu-card reveal-el">
                     <div class="edu-degree">B.E. Electronics & Telecommunication</div>
@@ -723,7 +821,7 @@
                 <div class="contact-links">
                     <a href="mailto:shaikh.sheroz07@gmail.com" class="contact-link"><i class="fas fa-envelope"></i> shaikh.sheroz07@gmail.com</a>
                     <a href="tel:+17816559092" class="contact-link"><i class="fas fa-phone"></i> +1 (781) 655-9092</a>
-                    <a href="https://linkedin.com/in/sherozshaikh" target="_blank" rel="noopener" class="contact-link"><i class="fab fa-linkedin"></i> sherozshaikh</a>
+                    <a href="https://linkedin.com/in/shaikh-sheroz-07s" target="_blank" rel="noopener" class="contact-link"><i class="fab fa-linkedin"></i> sherozshaikh</a>
                     <a href="https://github.com/sherozshaikh" target="_blank" rel="noopener" class="contact-link"><i class="fab fa-github"></i> sherozshaikh</a>
                     <a href="https://pypi.org/user/sherozshaikh/" target="_blank" rel="noopener" class="contact-link">
                       <i class="fab fa-python"></i> PyPI
